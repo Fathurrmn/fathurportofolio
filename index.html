@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <title>Web Portfolio</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+    <link rel="stylesheet" type="text/css" href="output.css">
+    <meta name="description" content="Web portfolio tailwind">
+    <meta name="keyword" content="tailwindcss, CSS, tailwind">
+    <meta name="author" content="codepolitan">
+    <style>
+        .gradient {
+            background-image: linear-gradient(to bottom right, #bfb54c, #702459);
+        }
+        .gradient-skill {
+            background-image: linear-gradient(#c13ddc, #3dabdb);
+            height: 8px;
+            border-radius: 4px;
+        }
+        .gradient-bottom {
+            background-image: linear-gradient(#bfb54c, #3dcde0);
+        }
+        .menu-transition {
+            transition: all 0.3s ease-in-out;
+        }
+    </style>
+</head>
+<body class="overflow-x-hidden">
+    <!-- Navbar -->
+    <nav class="fixed top-0 w-full bg-white shadow-md z-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex-shrink-0">
+                    <img src="img/logo.jpg" class="h-8 w-auto">
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#about" class="text-gray-600 hover:text-indigo-700 transition-colors">About me</a>
+                    <a href="#skill" class="text-gray-600 hover:text-indigo-700 transition-colors">Pemrograman</a>
+                    <a href="#recent" class="text-gray-600 hover:text-indigo-700 transition-colors">Recent Work</a>
+                    <a href="#hobbies" class="text-gray-600 hover:text-indigo-700 transition-colors">Hobbies</a>
+                    <a href="#contact" class="text-gray-600 hover:text-indigo-700 transition-colors">Contact me</a>
+                    <a href="#contact" class="px-4 py-2 rounded border border-indigo-600 text-indigo-600 hover:bg-indigo-700 hover:text-white transition-colors">
+                        Contact me
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-gray-600 hover:text-gray-900 focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden menu-transition">
+                <div class="px-2 pt-2 pb-3 space-y-1">
+                    <a href="#about" class="block px-3 py-2 rounded-md text-gray-600 hover:text-indigo-700 hover:bg-gray-50">About me</a>
+                    <a href="#skill" class="block px-3 py-2 rounded-md text-gray-600 hover:text-indigo-700 hover:bg-gray-50">Pemrograman</a>
+                    <a href="#recent" class="block px-3 py-2 rounded-md text-gray-600 hover:text-indigo-700 hover:bg-gray-50">Recent Work</a>
+                    <a href="#hobbies" class="block px-3 py-2 rounded-md text-gray-600 hover:text-indigo-700 hover:bg-gray-50">Hobbies</a>
+                    <a href="#contact" class="block px-3 py-2 rounded-md text-gray-600 hover:text-indigo-700 hover:bg-gray-50">Contact me</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+   
+<section id="about" class="pt-20 bg-about">
+    <div class="max-w-7xl mx-auto px-4 py-16 text-white text-center">
+        <div class="mb-16">
+            <img src="img/fathur.jpg" 
+                 class="w-32 h-32 md:w-48 md:h-48 shadow-xl mx-auto object-cover" 
+                 alt="Profile picture"/>
+        </div>
+        
+
+        <h1 class="text-4xl md:text-5xl font-bold mb-6">About me</h1>
+        
+        <div class="w-32 h-1 bg-pink-500 mx-auto mb-8 rounded-full"></div>
+        
+        <div class="max-w-3xl mx-auto">
+            <h2 class="text-2xl md:text-3xl font-bold mb-4">
+                Fathur Rahman
+            </h2>
+            
+            <p class="text-lg mb-8">
+                Memiliki ketertarikan khususnya di bidang manajemen basis data dan pengembangan web. Memiliki keahlian dalam merancang, mengoptimalkan, serta memelihara sistem basis data yang efisien, sekaligus mengembangkan aplikasi web yang ramah pengguna.
+            </p>
+        </div>
+        <!-- Skills Grid -->
+        <!-- Your content continues here... -->
+    </div>
+</section>
+
+<style>
+    .bg-about {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                          url('https://steamuserimages-a.akamaihd.net/ugc/2064377508512753883/550F14505FD97C0735D224DF1FD6A657A7A3D70A/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false');
+        background-size: cover;
+        background-position: center;
+    }
+</style>
+
+            <!-- Skills Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <!-- Programming -->
+                <div class="bg-white rounded-lg shadow-xl p-8 transform hover:scale-105 transition-transform">
+                    <i class="fas fa-laptop-code text-blue-500 text-5xl mb-6"></i>
+                    <h3 class="text-gray-800 text-xl font-bold mb-6">Programming</h3>
+                    <div class="space-y-4">
+                        <p class="text-gray-600">Python</p>
+                        <hr class="border-gray-200">
+                        <p class="text-gray-600">HTML</p>
+                        <hr class="border-gray-200">
+                        <p class="text-gray-600">C#</p>
+                        <hr class="border-gray-200">
+                        <p class="text-gray-600">Java</p>
+                    </div>
+                    <button class="mt-8 bg-blue-500 hover:bg-blue-700 text-white font-bold px-6 py-2 rounded-full shadow-md transition-colors">
+                        Lihat Portfolio
+                    </button>
+                </div>
+
+                <!-- Design -->
+                <div class="bg-white rounded-lg shadow-xl p-8 transform hover:scale-105 transition-transform">
+                    <i class="fas fa-pencil-ruler text-red-500 text-5xl mb-6"></i>
+                    <h3 class="text-gray-800 text-xl font-bold mb-6">Design</h3>
+                    <div class="space-y-4">
+                        <p class="text-gray-600">CSS</p>
+                        <hr class="border-gray-200">
+                        <p class="text-gray-600">Canva</p>
+                        <hr class="border-gray-200">
+                        <p class="text-gray-600">Draw.io</p>
+                        <hr class="border-gray-200">
+                        <p class="text-gray-600">Figma</p>
+                    </div>
+                    <button class="mt-8 bg-blue-500 hover:bg-blue-700 text-white font-bold px-6 py-2 rounded-full shadow-md transition-colors">
+                        Lihat Portfolio
+                    </button>
+                </div>
+
+                <!-- Database -->
+                <div class="bg-white rounded-lg shadow-xl p-8 transform hover:scale-105 transition-transform">
+                    <i class="fas fa-database text-green-500 text-5xl mb-6"></i>
+                    <h3 class="text-gray-800 text-xl font-bold mb-6">Database</h3>
+                    <div class="space-y-4">
+                        <p class="text-gray-600">MySQL</p>
+                        <hr class="border-gray-200">
+                        <p class="text-gray-600">SQL Server</p>
+                        <hr class="border-gray-200">
+                        <p class="text-gray-600">MongoDB</p>
+                        <hr class="border-gray-200">
+                        <p class="text-gray-600">XAMPP</p>
+                    </div>
+                    <button class="mt-8 bg-blue-500 hover:bg-blue-700 text-white font-bold px-6 py-2 rounded-full shadow-md transition-colors">
+                        Lihat Portfolio
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Programming Skills Section -->
+    <section id="skill" class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="w-full md:w-1/2">
+                    <img src="img/framework.jpg" class="rounded-lg shadow-xl w-full">
+                </div>
+                <div class="w-full md:w-1/2">
+                    <h2 class="text-4xl font-bold text-gray-800 mb-6">Pemrograman</h2>
+                    <div class="h-1 w-24 bg-pink-500 rounded-full mb-8"></div>
+                    
+                    <div class="space-y-6">
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="text-gray-600">SQL</span>
+                                <span class="text-gray-600">84%</span>
+                            </div>
+                            <div class="gradient-skill w-[84%]"></div>
+                        </div>
+                        
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="text-gray-600">HTML</span>
+                                <span class="text-gray-600">77%</span>
+                            </div>
+                            <div class="gradient-skill w-[77%]"></div>
+                        </div>
+                        
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="text-gray-600">CSS</span>
+                                <span class="text-gray-600">65%</span>
+                            </div>
+                            <div class="gradient-skill w-[65%]"></div>
+                        </div>
+                        
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="text-gray-600">Python</span>
+                                <span class="text-gray-600">70%</span>
+                            </div>
+                            <div class="gradient-skill w-[70%]"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recent Work Section -->
+    <<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Recent Work Section</title>
+        <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+        <style>
+            /* CSS untuk animasi */
+            .project {
+                opacity: 0;
+                transform: translateX(100px);
+            }
+    
+            .project.slide-in {
+                opacity: 1;
+                transform: translateX(0);
+                transition: opacity 0.5s ease, transform 0.5s ease;
+            }
+        </style>
+    </head>
+    <body>
+    
+    <section id="recent" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-5xl font-bold text-center text-gray-800 mb-8">Recent Work</h2>
+            <div class="h-1.5 w-32 bg-pink-500 rounded-full mx-auto mb-16"></div>
+    
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Project 1 -->
+                <div class="project bg-white rounded-2xl shadow-2xl overflow-hidden">
+                    <div class="h-80 bg-white flex items-center justify-center p-4">
+                        <img src="img/1.png" class="max-w-full max-h-full object-scale-down" alt="Website Daftar Kerja">
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-4">
+                            Website Daftar Kerja dengan Chatbot AI Gemini
+                        </h3>
+                        <p class="text-gray-600 mb-6 text-base">
+                            Proyek IMK yang mengembangkan website pendaftaran kerja dengan integrasi chatbot AI Gemini untuk memudahkan proses perekrutan.
+                        </p>
+                        <div class="flex items-center space-x-4 mb-6">
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Web Development</span>
+                            <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">AI Integration</span>
+                        </div>
+                        <button class="w-full bg-blue-600 hover:bg-blue-800 text-white font-bold py-4 px-7 rounded-xl text-lg transition-colors">
+                            Lihat Detail Project
+                        </button>
+                    </div>
+                </div>
+    
+                <!-- Project 2 -->
+                <div class="project bg-white rounded-2xl shadow-2xl overflow-hidden">
+                    <div class="h-80 bg-white flex items-center justify-center p-4">
+                        <img src="img/2.png" class="max-w-full max-h-full object-scale-down" alt="Machine Learning Project">
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-4">
+                            Proyek Pembangunan Model Machine Learning
+                        </h3>
+                        <p class="text-gray-600 mb-6 text-base">
+                            Pengembangan model machine learning menggunakan metode supervised dan unsupervised learning untuk analisis data kompleks.
+                        </p>
+                        <div class="flex items-center space-x-4 mb-6">
+                            <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">Machine Learning</span>
+                            <span class="bg-red-100 text-red-800 px-3 py-1 rounded-full text-sm">Data Science</span>
+                        </div>
+                        <button class="w-full bg-blue-600 hover:bg-blue-800 text-white font-bold py-4 px-7 rounded-xl text-lg transition-colors">
+                            Lihat Detail Project
+                        </button>
+                    </div>
+                </div>
+    
+                <!-- Project 3 -->
+                <div class="project bg-white rounded-2xl shadow-2xl overflow-hidden">
+                    <div class="h-80 bg-white flex items-center justify-center p-4">
+                        <img src="img/3.png" class="max-w-full max-h-full object-scale-down" alt="Online Course">
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-4">
+                            Kursus Lepkom dari Kampus
+                        </h3>
+                        <p class="text-gray-600 mb-6 text-base">
+                            Kursus yang pernah saya ambil dan ikuti Fundamental WEB, Fundamental DBMS, SQL SERVER FOR BERGINNER, C# FOR BEGINNER, dan SQL SERVER FOR INTERMEDIATE
+                        </p>
+                        <div class="flex items-center space-x-4 mb-6">
+                            <span class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm">SQL</span>
+                            <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm">Database</span>
+                        </div>
+                        <button class="w-full bg-blue-600 hover:bg-blue-800 text-white font-bold py-4 px-7 rounded-xl text-lg transition-colors">
+                            Lihat Detail Project
+                        </button>
+                    </div>
+                </div>
+    
+                <!-- Project 4 -->
+                <div class="project bg-white rounded-2xl shadow-2xl overflow-hidden">
+                    <div class="h-80 bg-white flex items-center justify-center p-4">
+                        <img src="img/4.png" class="max-w-full max-h-full object-scale-down" alt="Cryptography Project">
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-4">
+                            Aplikasi Kriptografi Hill Cipher
+                        </h3>
+                        <p class="text-gray-600 mb-6 text-base">
+                            Implementasi algoritma Hill Cipher menggunakan HTML, CSS, dan JavaScript untuk tugas Sistem Keamanan Teknologi Informasi. Program bisa digunakan untuk Enkripsi dan Deskripsi
+                        </p>
+                        <div class="flex items-center space-x-4 mb-6">
+                            <span class="bg-pink-100 text-pink-800 px-3 py-1 rounded-full text-sm">Cryptography</span>
+                            <span class="bg-teal-100 text-teal-800 px-3 py-1 rounded-full text-sm">Web Security</span>
+                        </div>
+                        <button class="w-full bg-blue-600 hover:bg-blue-800 text-white font-bold py-4 px-7 rounded-xl text-lg transition-colors">
+                            Lihat Detail Project
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const projects = document.querySelectorAll('.project');
+    
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('slide-in');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.5 });
+    
+            projects.forEach(project => {
+                observer.observe(project);
+            });
+        });
+    </script>
+    
+    </body>
+    </html>
+    
+
+    <!-- Hobby -->
+    <section id="hobbies" class="py-20 bg-gray-100">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-5xl font-bold text-center text-gray-800 mb-16">Hobi</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10">
+                <!-- Hobby 1 -->
+                <div class="bg-white rounded-lg shadow-xl overflow-hidden inline-block">
+                    <img src="https://cdn.discordapp.com/attachments/1094644084628541543/1333527950036959282/IMG_20250128_030327.jpg?ex=6799382f&is=6797e6af&hm=1b68aaa7fae955f0d9f4ef53b0360f0395c3b92890e7e667be0a445128091aca&" alt="Hobi 1" class="w-full h-auto object-contain">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Traveling</h3>
+                        <p class="text-gray-700 text-base">Traveling itu seru karena aku bisa menjelajahi tempat baru, bertemu orang-orang menarik, mencoba hal-hal unik, dan menciptakan kenangan tak terlupakan.</p>
+                    </div>
+                </div>
+                
+                <!-- Hobby 2 -->
+                <div class="bg-white rounded-lg shadow-xl overflow-hidden inline-block">
+                    <img src="https://cdn.discordapp.com/attachments/1094644084628541543/1333527951144128613/IMG_20250128_030255.jpg?ex=6799382f&is=6797e6af&hm=83d0bae3cf64c126d7013553f92a4a6b357902c0f0a5df0dbf0320f0de2cdd8a&" alt="Hobi 2" class="w-full h-auto object-contain">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Wisata Kuliner</h3>
+                        <p class="text-gray-700 text-base">Menjelajahi kuliner baru itu seru karena aku bisa menikmati rasa yang unik, mengenal budaya lewat makanan, dan selalu menemukan kejutan di setiap hidangan.</p>
+                    </div>
+                </div>
+                
+                <!-- Hobby 3 -->
+                <div class="bg-white rounded-lg shadow-xl overflow-hidden inline-block">
+                    <img src="https://cdn.discordapp.com/attachments/1094644084628541543/1333527952285237258/IMG_20250128_025936.jpg?ex=6799382f&is=6797e6af&hm=94c619a77c340005f21147cc759567ab2d9b50c28b95f0db1ff7faebc18355c7&" alt="Hobi 3" class="w-full h-auto object-contain">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Game</h3>
+                        <p class="text-gray-700 text-base">Menjelajahi game itu seru karena aku bisa merasakan petualangan tanpa batas, mengasah keterampilan, dan menikmati cerita serta tantangan yang memacu adrenalin.</p>
+                    </div>
+                </div>
+                
+                <!-- Hobby 4 -->
+                <div class="bg-white rounded-lg shadow-xl overflow-hidden inline-block">
+                    <img src="https://cdn.discordapp.com/attachments/1094644084628541543/1333528516926378104/IMG_20250128_025636.jpg?ex=679938b6&is=6797e736&hm=4d9f47b7574866d18a070f3e36318a2ed0024b7fe25d11236aca52e46a7ec033&" alt="Hobi 4" class="w-full h-auto object-contain">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Investasi Saham</h3>
+                        <p class="text-gray-700 text-base">Mempelajari dan terjun ke dunia saham itu seru karena aku bisa menambah wawasan keuanganku, memahami cara kerja pasar, mengambil keputusan strategis, dan merasakan kepuasan saat investasi berhasil tumbuh.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+    
+    
+    
+    
+
+    <!-- Contact Section -->
+    <section id="contact" class="gradient-bottom py-16">
+        <div class="max-w-3xl mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center text-white mb-12">Contact me</h2>
+            
+            <div class="bg-white rounded-lg shadow-xl p-8">
+                <h3 class="text-2xl font-bold text-gray-800 mb-6">Kontak Saya</h3>
+                <p class="text-gray-600 mb-8">Silahkan isi form ini</p>
+                
+                <form action="mailto:portofathur@gmail.com" method="post" enctype="text/plain" class="space-y-6">
+                    <div>
+                        <label class="block text-gray-700 font-bold mb-2">Nama</label>
+                        <input type="text" 
+                               class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-colors"
+                               placeholder="ISI DENGAN NAMA LENGKAP" name="name" required>
+                    </div>
+                    
+                    <div>
+                        <label class="block text-gray-700 font-bold mb-2">Email</label>
+                        <input type="email" 
+                               class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-colors"
+                               placeholder="Email" name="email" required>
+                    </div>
+                    
+                    <div>
+                        <label class="block text-gray-700 font-bold mb-2">Pesan</label>
+                        <textarea rows="4" 
+                                  class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-colors"
+                                  placeholder="Pesan yang ingin disampaikan" name="message" required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="w-full bg-indigo-700 hover:bg-indigo-800 text-white font-bold py-3 px-6 rounded-lg transition-colors">
+                        Kirim Pesan
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- Footer -->
+    <section class="w-screen mx-auto py-4 bg-white mt-8 mb-8">
+        <div class="text-center">
+            <!-- link & icon -->
+            <a href="https://web.facebook.com/" class="text-indigo-700 hover:text-indigo-900 p-2 ">
+                <i class="fa-2x fab fa-facebook"></i>
+            </a>
+            <a href="https://www.instagram.com/" class="text-indigo-700 hover:text-indigo-900 p-2 ">
+                <i class="fa-2x fab fa-instagram"></i>
+            </a>
+            <a href="https://www.linkedin.com/feed/" class="text-indigo-700 hover:text-indigo-900 p-2 ">
+                <i class="fa-2x fab fa-linkedin"></i>
+            </a>
+        </div>
+        <div class="text-center mt-4 text-gray-600">
+            Fathur Rahman - 2025
+        </div>
+    </section>
+
+
+    <!-- Mobile Menu JavaScript -->
+    <script>
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking a link
+        const mobileLinks = mobileMenu.getElementsByTagName('a');
+        for (const link of mobileLinks) {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        }
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!mobileMenu.contains(e.target) && !mobileMenuButton.contains(e.target)) {
+                mobileMenu.classList.add('hidden');
+            }
+        });
+    </script>
+</body>
+</html>
